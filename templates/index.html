@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOC Security Gateway</title>
+    <style>
+        /* איפוס והגדרת רקע שחור */
+        body {
+            background-color: #050505;
+            color: #00ffcc; /* צבע ניאון טורקיז/ירוק סייבר */
+            font-family: 'Courier New', Courier, monospace; /* פונט של טרמינל */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* הקופסה המרכזית */
+        .terminal-box {
+            background-color: #0a0a0a;
+            border: 2px solid #00ffcc;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        /* כותרות */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #888;
+        }
+
+        /* אנימציית הבהוב לסטטוס */
+        .status {
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .blink {
+            animation: blinker 1.5s linear infinite;
+            color: #00ff00;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        /* אפקט של פסי סריקה ברקע */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(255,255,255,0),
+                rgba(255,255,255,0) 50%,
+                rgba(0,0,0,0.2) 50%,
+                rgba(0,0,0,0.2)
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="terminal-box">
+        <h1>System Gateway</h1>
+        <p>DevSecOps Final Project - Live Environment</p>
+        <div class="status">
+            System Status: <span class="blink">SECURE & ONLINE</span>
+        </div>
+    </div>
+</body>
+</html>

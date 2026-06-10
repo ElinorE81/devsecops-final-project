@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.env
+
+# Terraform (נצטרך את זה לשלב הבא)
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.tfstate.lock.info
+
+# OS generated files
+.DS_Store
